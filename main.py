@@ -3,6 +3,7 @@ from urllib.request import *
 import yaml
 import os
 
+
 with open('info.yaml') as file:
     templates = yaml.safe_load(file)
 
@@ -49,7 +50,7 @@ def main(num: int, folder_name: str) -> None:
     for num_img in range(num):
         image = lis[num_img]['src']
         urlretrieve('https:' + image, folder_name + '/' + str(num_img) + '.jpg')
-        print(str(num_img) + '.jpg')
+        print(str(num_img) + '.jpg Скачен')
 
 
 if __name__ == '__main__':
