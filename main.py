@@ -6,9 +6,9 @@ import os
 with open('info.yaml') as file:
     templates = yaml.safe_load(file)
 
-url = templates['url']
-count = templates['quantity']
-folder_name = templates['folder']
+url: str = templates['url']
+count: int = templates['quantity']
+folder_name: str = templates['folder']
 
 
 def new_folder(folder: str) -> None:
@@ -52,5 +52,5 @@ def main(num: int, folder_name: str) -> None:
         urlretrieve('https:' + image, folder_name + '/' + str(num_img) + '.jpg')
         print(str(num_img) + '.jpg Скачен')
 
-        if __name__ == '__main__':
-            main(count, folder_name)
+if __name__ == '__main__':
+    main(count, folder_name)
