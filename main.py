@@ -32,6 +32,7 @@ def get_html(url: str) -> str:
     return html
 
 
+
 def main(num: int, folder_name: str) -> None:
     """
     Скачиваем определенное кол-во изображений
