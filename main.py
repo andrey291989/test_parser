@@ -49,7 +49,7 @@ def main(num: int, folder_name: str) -> None:
     for num_img in range(num):
         image = lis[num_img]['src']
         urlretrieve('https:' + image, folder_name + '/' + str(num_img) + '.jpg')
-        print(str(num_img) + '.jpg Скачен)
+        print(str(num_img) + '.jpg Скачен')
 
         if __name__ == '__main__':
             main(count, folder_name)
